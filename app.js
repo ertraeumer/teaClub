@@ -11,7 +11,8 @@ require('dotenv').config();
 const userRouter = require('./routes/user.router');
 const teaRouter = require('./routes/tea.router');
 const checkAuth = require('./middlewares/checkAuth');
-const PORT = 3000
+
+const PORT = 3000;
 const app = express();
 
 app.set('view engine', 'hbs');
@@ -29,7 +30,7 @@ app.use(
     saveUninitialized: false,
     name: 'tea',
     cookie: { httpOnly: true, maxAge: 60 * 60 * 1000 },
-  })
+  }),
 );
 
 // app.use((req, res, next) => {
@@ -43,8 +44,6 @@ app.use(
 //   res.render('index');
 // });
 
-
-
-app.listen(PORT,()=> {
+app.listen(PORT, () => {
   console.log(`vse horoso${PORT}`);
-}  )
+});
