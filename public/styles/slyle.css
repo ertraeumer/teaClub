@@ -1,0 +1,198 @@
+* {
+  /* border: 1px solid red; */
+}
+
+body {
+  background-image: url(../../public/images/1612602529_125-p-temno-zelenii-chai-fon-183.jpg);
+  background-size: 100%;
+
+}
+#header{
+  display: flex;
+  height: 170px;
+  background-color: rgba(23, 7, 41, 0.753);
+  border-radius: 5px;
+  border: 1px solid rgb(230, 46, 123);
+  box-shadow: 0 0 20px rgb(255, 255, 255); 
+  justify-content:space-between;
+}
+#logo {
+  height: 120px;
+  width: 120px;
+  margin-top: 20px;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+#logo:hover{
+  box-shadow: 0 0 30px rgb(255, 255, 255); 
+}
+#image{
+margin-left: 20%;
+
+}
+#title {
+margin: auto;
+font-size: 100px;
+}
+
+
+#buttons {
+  width: 110px;
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: 30px;
+}
+.sing {
+  width: 100px;
+  height: 50px;
+  margin: 5px;
+  border-radius: 50%;
+  background-color:  rgba(59, 20, 104, 0.11);
+  font-size: 20px;
+  box-shadow: 0 0 20px rgb(10, 19, 37); 
+  
+}
+
+.more {
+  text-decoration: none;
+  color: rgba(124, 235, 229, 0.87);
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 1000;
+  text-shadow: 0 0 20px rgb(10, 19, 37);
+}
+
+#content {   
+margin-top: 10px;
+padding: 5px;
+display: flex;
+justify-content: space-between;
+}
+.a {
+  background-color:rgba(16, 96, 102, 0.658);
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgb(0, 0, 0); 
+}
+#map {
+  width: 68%;
+}
+#comments{
+  width: 29%;
+}
+.sing:hover{
+  background-color: rgba(129, 228, 235, 0.925);
+}
+
+.more:hover{
+  color: rgb(230, 44, 106);
+  transition: all 0.5s;
+}
+
+.post {
+  width: 90%;
+  margin: 12px auto;
+  background-color: rgba(230, 44, 75, 0.479);
+  border-radius: 10px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  color: aliceblue;
+  text-align: center;
+  padding: 1px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgb(255, 255, 255);
+}
+.foto {
+  width: 100px;
+  height: 100%;
+  border-radius: 50%;
+}
+.com{
+  width: 300px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.text{
+  margin: 10px auto;
+  color: blanchedalmond;
+}
+
+.tea{
+  margin-top: 5px;
+  color: rgb(114, 235, 215);
+  font-weight: bolder;
+}
+.autor{
+  margin-bottom: 5px;
+  color: rgba(155, 225, 228, 0.938);
+  text-align: end;
+  margin-right: 10px;
+}
+.foto:hover{
+  box-shadow: 0 0 30px rgb(124, 224, 241); 
+ 
+  transition: all 0.3s;
+}
+#b{
+  width: 150px;
+  background-color: rgba(35, 6, 61, 0.609);
+}
+#addTea{
+display: flex;
+justify-content: center;
+background-color: rgba(23, 7, 41, 0.753);
+margin-top: 5px;
+background-size: 100%;
+border: 1px solid rgb(230, 46, 123);
+box-shadow: 0 0 20px rgb(255, 255, 255); 
+border-radius: 10px;
+height: 50px;
+}
+#map{
+  padding: 15px;
+}
+#x{
+  width: 1013px;
+  height: 520px;
+}
+#add{
+  margin-top: 10px;
+  font-size: 30px;
+}
+#form{
+  margin: 40px auto;
+  width: 1000px;
+  height: 500px;
+  display: flex;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgb(255, 255, 255); 
+}
+#c {
+  margin: auto;
+  
+}
+
+.input{
+  width: 500px;
+  height: 50px;
+  font-size: 30px;
+  text-align: center;
+  background-color: rgba(212, 6, 40, 0.479);
+  border-radius: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.formButton{
+  width: 505px;
+  height: 60px;
+  background-color: rgba(35, 6, 61, 0.863);
+  color: rgb(141, 198, 236);
+  font-size: 40px;
+  border-radius: 20px;
+  font-weight: 900;
+}
+.formButton:hover{
+  color: rgb(230, 44, 106);
+  box-shadow: 0 0 30px rgb(124, 224, 241); 
+  transition: all 0.5s;
+}
