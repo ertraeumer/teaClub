@@ -18,7 +18,8 @@ router
       isAdmin: false,
     });
     req.session.userId = currUser.id;
-    res.redirect('/');
+    req.session.status = currUser.isAdmin;
+    res.redirect('/all_teas');
   });
 
 router
@@ -32,16 +33,17 @@ router
     const result = await bcrypt.compare(password, user.password);
     if (result) {
       req.session.userId = user.id;
-      res.redirect('/');
+      req.session.status = user.isAdmin;
+      res.redirect('/all_teas');
     } else {
-      res.redirect('/user/signup');
+      res.redirect('/signup'); //user
     }
   });
 
 router.get('/logout', (req, res) => {
   req.session.destroy();
   res.clearCookie('name');
-  res.redirect('/');
+  res.redirect('/all_teas');
 });
 
 module.exports = router;

@@ -10,7 +10,7 @@
 <body>
     <div id="header">
     <div id="image">
-          <a class="more" href="">
+          <a class="more" href="http://localhost:3000/all_teas">
             <div id="title">
       
               <img id="logo" src="/images/pngwing.com (2).png" alt="">  more ЧАЯ
@@ -19,12 +19,12 @@
           </a>
     </div>
     <div id="buttons">
-      {{!-- {{#if}} --}}
-      <a  href=""><button class="sing more" type="submit">Sign in</button></a>
-      <a  href=""><button class="sing more" type="submit">Sign up</button></a>
-      {{!-- {{else}} --}}
-      {{!-- <a  href=""><button class="sing more" type="submit">Log out</button></a> --}}
-      {{!-- {{/if}} --}}
+      {{#if userId}}
+      <a  href="http://localhost:3000/logout"><button class="sing more" type="submit">Log out</button></a>
+      {{else}}
+      <a  href="http://localhost:3000/signIn"><button class="sing more" type="submit">Sign in</button></a>
+      <a  href="http://localhost:3000/signup"><button class="sing more" type="submit">Sign up</button></a>
+      {{/if}}
     </div>
   </div>
   {{{body}}}
