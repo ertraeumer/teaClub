@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoreЧАЯ</title>
+</head>
+<body>
+    <div id="header">
+    <div id="image">
+          <a class="more" href="">
+            <div id="title">
+      
+              <img id="logo" src="./public/images/pngwing.com (2).png" alt="">  more ЧАЯ
+      
+            </div>
+          </a>
+    </div>
+    <div id="buttons">
+      {{#if}}
+      <a  href=""><button class="sing more" type="submit">Sign in</button></a>
+      <a  href=""><button class="sing more" type="submit">Sign up</button></a>
+      {{else}}
+      <a  href=""><button class="sing more" type="submit">Log out</button></a>
+      {{/if}}
+    </div>
+  </div>
+  {{{body}}}
+</body>
+</html>
