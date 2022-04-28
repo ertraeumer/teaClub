@@ -10,7 +10,7 @@ const FileStore = require('session-file-store')(session);
 require('dotenv').config();
 const userRouter = require('./routes/user.router');
 const teaRouter = require('./routes/tea.router');
-const checkAuth = require('./middlewares/checkAuth');
+// const checkAuth = require('./middlewares/checkAuth');
 
 const PORT = 3000;
 const app = express();
@@ -21,6 +21,7 @@ app.set('views', path.resolve(process.env.PWD, 'src', 'views'));
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
 
 app.use(
   session({
@@ -43,6 +44,7 @@ app.use(
 // app.get('/', checkAuth, (req, res) => {
 //   res.render('index');
 // });
+app.use('/all_teas', teaRouter);
 
 app.listen(PORT, () => {
   console.log(`vse horoso${PORT}`);

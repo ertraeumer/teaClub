@@ -32,7 +32,7 @@ router
     const result = await bcrypt.compare(password, user.password);
     if (result) {
       req.session.userId = user.id;
-      res.redirect('/');
+      res.redirect('/all_teas');
     } else {
       res.redirect('/user/signup');
     }
@@ -40,7 +40,7 @@ router
 
 router.get('/logout', (req, res) => {
   req.session.destroy();
-  res.clearCookie('sid');
+  res.clearCookie('name');
   res.redirect('/');
 });
 
