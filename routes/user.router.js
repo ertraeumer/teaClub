@@ -40,7 +40,7 @@ router
 
 router.get('/logout', (req, res) => {
   req.session.destroy();
-  res.clearCookie('sid');
+  res.clearCookie('name');
   res.redirect('/');
 });
 

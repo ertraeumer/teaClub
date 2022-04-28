@@ -3,27 +3,27 @@
       <div>
         
       </div>
-      {{#if}}
+      {{!-- {{#if}} --}}
       <div id="addTea">
        <a href=""><button id="b" class="sing more">Add new tea</button></a> 
       </div>
-      {{/if}}
+      {{!-- {{/if}} --}}
     </div>
     <div class="a" id="comments">
-      {{#each }}
+      {{#each latestComments}}
       <div class="post">
         <div>
-          <a href="{{ }}"><img class="foto" src={{}} alt=""></a>
+          <a href="http://localhost:3000/all_teas/{{this.Tea.id}}"><img class="foto" src="/images/1612602529_125-p-temno-zelenii-chai-fon-183.jpg" alt=""></a>
         </div>
         <div class="com">
           <div class="tea">
-          {{}}
+          {{this.Tea.tea_name}}
           </div>
          <div class="text">
-          {{}}
+          {{this.content}}
           </div>
           <div class="autor">
-          {{}}
+          {{this.User.login}}
           </div>
         </div>
       </div>
