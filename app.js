@@ -38,7 +38,7 @@ app.use((req, res, next) => {
   console.log(req.session.status);
   res.locals.userId = req.session?.userId; // глобальная переменная userId теперь доступна во всех hbs
   res.locals.status = req.session?.status;
-  console.log(res.locals.status)
+  console.log(res.locals.status);
   next();
 });
 

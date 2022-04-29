@@ -5,7 +5,7 @@ const { Tea, Comment, User } = require('../db/models');
 router.get('/', async (req, res) => {
   try {
     let latestComments = await Comment.findAll({ include: [{ model: User }, { model: Tea }], order: ['createdAt'], limit: 5 });
-    console.log(JSON.parse(JSON.stringify(latestComments)));
+    // console.log(JSON.parse(JSON.stringify(latestComments)));
     res.render('all_teas', { latestComments }); // res.status(200)?
   } catch (error) {
     res.send('Ooops, you have got an error:', error);
@@ -16,8 +16,20 @@ router.get('/:tea_id', async (req, res) => {
   const { tea_id } = req.params;
   try {
     const exactTea = await Tea.findOne({ where: { id: tea_id } });
-    const commentsToExactTea = await Comment.findAll({ where: { tea_id } })
+    const commentsToExactTea = await Comment.findAll({ where: { tea_id }});
     res.render('tea_page', { exactTea, commentsToExactTea });
+  } catch (error) {
+    res.send('Ooops, you have got an error:', error);
+  }
+});
+
+router.post('/:tea_id', async (req, res) => {
+  const { tea_id } = req.params;
+  const { content } = req.body;
+  try {
+    await Comment.create({ content, tea_id, user_id: req.session?.userId });
+    res.redirect(`/all_teas/${tea_id}`);
+    // console.log(req.session.userId);
   } catch (error) {
     res.send('Ooops, you have got an error:', error);
   }
