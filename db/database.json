@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "bib",
-    "password": 123,
+    "username": "vova",
+    "password": "123",
     "database": "tea_club",
     "host": "127.0.0.1",
     "dialect": "postgres"

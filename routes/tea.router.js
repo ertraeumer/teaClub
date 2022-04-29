@@ -4,7 +4,7 @@ const { Tea, Comment, User } = require('../db/models');
 // all_teas
 router.get('/', async (req, res) => {
   try {
-    let latestComments = await Comment.findAll({ include: [{ model: User }, { model: Tea }], order: ['createdAt'], limit: 5 });
+    let latestComments = await Comment.findAll({ include: [{ model: User }, { model: Tea }], order: [['createdAt', 'DESC']], limit: 4 });
     // console.log(JSON.parse(JSON.stringify(latestComments)));
     res.render('all_teas', { latestComments }); // res.status(200)?
   } catch (error) {
