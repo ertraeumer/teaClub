@@ -119,6 +119,7 @@ height: 70vh;
   margin: 10px auto;
   color: blanchedalmond;
   font-style: oblique;
+  font-size: 15px;
 }
 
 .tea{
@@ -144,8 +145,8 @@ height: 70vh;
 #addTea{
 display: flex;
 justify-content: center;
-background-color: rgba(189, 7, 62, 0.527);
-margin-top: -25px;
+background-color: rgba(189, 7, 37, 0.89);
+margin-top: -55px;
 margin-left: 20px;
 background-size: 100%;
 border: 1px solid rgb(133, 5, 58);
@@ -239,8 +240,8 @@ position: relative;
 }
 #gleb{
   overflow-y: scroll;
-  max-height: 60vh;
-  min-height: 473px;
+  max-height: 40vh;
+  min-height: 400px;
 }
 #button-2{
   height: 40px;
@@ -268,7 +269,7 @@ position: relative;
   margin-top: 50px;
 }
 #addComment{
-  width: 300px;
+  width: 250px;
   height: 35px;
   font-size: 20px;
 }
@@ -288,4 +289,21 @@ position: relative;
 #myMap{
   width: 99%;
   height: 99%;
+}
+.ss{
+  margin: 15px;
+  width: 90%;
+}
+.b3{
+  height: 200px;
+}
+#b4{
+  margin-left: 45px;
+  margin-top: 15px;
+  width: 80%;
+  height: 100px;
+  background-color: rgba(30, 1, 65, 0.842);
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  font-size: 30px;
 }
