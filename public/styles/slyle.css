@@ -3,7 +3,7 @@
 }
 
 body {
-  background-image: url(/images/1612602529_125-p-temno-zelenii-chai-fon-183.jpg);
+  background-image: url(../images/1612602529_125-p-temno-zelenii-chai-fon-183.jpg);
   background-size: 100%;
 
 }
@@ -25,6 +25,7 @@ body {
 }
 #logo:hover{
   box-shadow: 0 0 30px rgb(255, 255, 255); 
+  transition: 0.5s;
 }
 #image{
 margin-left: 20%;
@@ -66,6 +67,7 @@ margin-top: 10px;
 padding: 5px;
 display: flex;
 justify-content: space-between;
+height: 70vh;
 }
 .a {
   background-color:rgba(16, 96, 102, 0.658);
@@ -85,6 +87,7 @@ justify-content: space-between;
 .more:hover{
   color: rgb(230, 44, 106);
   transition: all 0.5s;
+  text-shadow: 0 0 5px rgb(255, 255, 255);
 }
 
 .post {
@@ -115,6 +118,7 @@ justify-content: space-between;
 .text{
   margin: 10px auto;
   color: blanchedalmond;
+  font-style: oblique;
 }
 
 .tea{
@@ -140,16 +144,21 @@ justify-content: space-between;
 #addTea{
 display: flex;
 justify-content: center;
-background-color: rgba(23, 7, 41, 0.753);
-margin-top: 5px;
+background-color: rgba(189, 7, 62, 0.527);
+margin-top: -25px;
+margin-left: 20px;
 background-size: 100%;
-border: 1px solid rgb(230, 46, 123);
+border: 1px solid rgb(133, 5, 58);
 box-shadow: 0 0 20px rgb(255, 255, 255); 
-border-radius: 10px;
-height: 50px;
+border-radius: 30px;
+height: 55px;
+width: 23%;
+z-index: 3;
+position: relative;
 }
 #map{
   padding: 15px;
+  z-index: 1;
 }
 #x{
   width: 1013px;
@@ -195,4 +204,88 @@ height: 50px;
   color: rgb(230, 44, 106);
   box-shadow: 0 0 30px rgb(124, 224, 241); 
   transition: all 0.5s;
+}
+.teaImage{
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  margin: 15px 0;
+}
+.info{
+  width: 99%;
+  display: flex;
+  justify-content: space-around;
+  color: aliceblue;
+  text-align: center;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 30px;
+  background-color: rgba(9, 1, 26, 0.692);
+  border-radius: 30px;
+  border-bottom-left-radius:500px;
+  border-top-left-radius: 500px;
+  border: 1px solid white;
+  box-shadow: 0 0 30px rgb(124, 224, 241); 
+  
+  
+}
+#teaTitle{
+  margin-top: 40px;
+  font-size: 40px;
+  color: rgba(124, 235, 229, 0.87);
+  font-weight: bolder;
+}
+.inf{
+  width: 500px;
+}
+#gleb{
+  overflow-y: scroll;
+  max-height: 60vh;
+  min-height: 473px;
+}
+#button-2{
+  height: 40px;
+  text-align: center;
+  padding: 18px;
+  background-color: rgba(9, 1, 26, 0.692);
+  margin: 13px;
+  border-radius: 10px;
+  border: 1px solid rgb(255, 255, 255);
+  box-shadow: 0 0 30px rgb(255, 190, 217); 
+}
+#gleb::-webkit-scrollbar {
+  width: 10px;
+}
+#gleb::-webkit-scrollbar-track {
+  webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color:rgba(16, 96, 102, 0.658);;
+  border-radius: 10px;
+}
+#gleb::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(180deg, #fb009b9d, #2503419d);
+}
+#opis{
+  margin-top: 50px;
+}
+#addComment{
+  width: 300px;
+  height: 35px;
+  font-size: 20px;
+}
+
+#b2{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+  background-color:  #a7faf39d;
+  font-size: 19px;
+}
+#b2:hover{
+  box-shadow: 0 0 20px rgb(255, 255, 255); 
+  transition: 0.5s;
+}
+#myMap{
+  width: 99%;
+  height: 99%;
 }

@@ -1,0 +1,59 @@
+<div id="content">
+  <div class="a" id="map">
+    <div class="info">
+      <div>
+        <img class="teaImage" src="{{exactTea.image}}" alt="">
+      </div>
+      <div class="inf">
+        <div class="text" id="teaTitle">
+          {{exactTea.tea_name}}
+        </div>
+        <div class="text">
+          <h2>{{exactTea.from}}</h3>
+        </div>
+        <div id="opis" class="text">
+          {{exactTea.description}}
+        </div>
+      </div>
+    </div>
+    <div>
+      {{#if status}}
+      <a href="http://localhost:3000/all_teas/delete/{{exactTea.id}}">
+        <div id="addTea">
+            <div id="add" class="more">Delete</div>
+        </div>
+      </a>
+      {{/if}}
+    </div>
+  </div>
+  <div class="a" id="comments">
+    <div id="gleb">
+        {{#each commentsToExactTea}}
+      <div class="post">
+        <div>
+         <img class="foto" src={{../exactTea.image}} alt="photo">
+        </div>
+        <div class="com">
+          <div class="tea">
+            {{exactTea.tea_name}}
+          </div>
+          <div class="text">
+            {{this.content}}
+          </div>
+          <div class="autor">
+            {{this.User.login}}
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+    {{#if userId}}
+    <div id="button-2">
+      <form action="http://localhost:3000/all_teas/{{exactTea.id}}" method="post">
+        <input id="addComment" class="input" name="content" type="text" placeholder="write comment">
+        <button type="submit" id="b2">🔘</button>
+      </form>
+    </div>
+    {{/if}}
+  </div>
+</div>

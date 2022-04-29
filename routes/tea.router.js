@@ -15,11 +15,12 @@ router.get('/', async (req, res) => {
 router.get('/:tea_id', async (req, res) => {
   const { tea_id } = req.params;
   try {
-    const exactTea = await Tea.findOne({ where: { id: tea_id } });
-    const commentsToExactTea = await Comment.findAll({ where: { tea_id }});
-    res.render('tea_page', { exactTea, commentsToExactTea });
+    const exactTea = await Tea.findOne({ where: { id: tea_id }, raw: true });
+    const commentsToExactTea = await Comment.findAll({ include: User, where: { tea_id } });
+    if (exactTea === null) res.redirect('/all_teas')
+    res.render('aboutTea', { exactTea, commentsToExactTea });
   } catch (error) {
-    res.send('Ooops, you have got an error:', error);
+    res.send('Ooops, you have got an error:')
   }
 });
 
@@ -51,11 +52,13 @@ router.post('/new_tea', async (req, res) => {
 
 router.get('/delete/:tea_id', async (req, res) => {
   const { tea_id } = req.params;
+  console.log(tea_id);
   try {
     await Tea.destroy({ where: { id: tea_id } });
-    res.redirect('/all_teas');
+    res.redirect('http://localhost:3000/all_teas');
   } catch (error) {
-    res.send('Ooops, you have got an error:', error);
+    console.log(error)
+    res.send('Ooops, you have got an error:');
   }
 });
 
