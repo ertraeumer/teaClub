@@ -1,0 +1,61 @@
+<div id="content">
+  <div class="a" id="map">
+    <div class="info">
+      <div>
+        <img class="teaImage" src="{{tea foto}}" alt="">
+      </div>
+      <div class="inf">
+        <div class="text" id="teaTitle">
+          {{tea name}}
+        </div>
+        <div class="text">
+          <h2>{{tea strana}}</h3>
+        </div>
+        <div id="opis" class="text">
+          {{tea opisanie}}
+        </div>
+      </div>
+    </div>
+    <div>
+      {{#if status}}
+      <a href="">
+        <div id="addTea">
+          <a class="more" href="">
+            <div id="add" class="more">Delete</div>
+          </a>
+        </div>
+      </a>
+      {{/if}}
+    </div>
+  </div>
+  <div class="a" id="comments">
+    <div id="gleb">
+      <div class="post">
+        {{#each massive}}
+        <div>
+          <a href=""><img class="foto" src="{{ssilka na foto}}" alt=""></a>
+        </div>
+        <div class="com">
+          <div class="tea">
+            {{nazvanie chaya}}
+          </div>
+          <div class="text">
+            {{komment}}
+          </div>
+          <div class="autor">
+            {{avtor}}
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+    {{#if userId}}
+    <div id="button-2">
+      <form action="http://localhost:3000/all_teas/{{tea_id}}" method="post">
+        <input id="addComment" class="input" name="content" type="text" placeholder="write comment">
+        <button id="b2">🔘</button>
+      </form>
+    </div>
+    {{/if}}
+  </div>
+</div>

@@ -4,8 +4,10 @@
         
       </div>
       {{!-- {{#if}} --}}
-      <div id="addTea">
-       <a href=""><button id="b" class="sing more">Add new tea</button></a> 
+      <div>
+        <div id="addTea">
+       <a class="more" href=""><div id="add" class="more">Add new tea</div></a> 
+      </div>
       </div>
       {{!-- {{/if}} --}}
     </div>
@@ -13,7 +15,7 @@
       {{#each latestComments}}
       <div class="post">
         <div>
-          <a href="http://localhost:3000/all_teas/{{this.Tea.id}}"><img class="foto" src="/images/1612602529_125-p-temno-zelenii-chai-fon-183.jpg" alt=""></a>
+          <a href="http://localhost:3000/all_teas/{{this.Tea.id}}"><img class="foto" src="{{this.Tea.image}}" alt="https://besttea.ru/images/watermarked/1/detailed/11/ba-164.jpg"></a>
         </div>
         <div class="com">
           <div class="tea">
