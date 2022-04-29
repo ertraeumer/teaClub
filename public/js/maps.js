@@ -14,9 +14,9 @@ async function init() {
   const result = await bla();
   console.log(result.allTeas);
   result.allTeas.map((el) => {
-    const newarr = el.from.split(', ').map((le) => Number(le));
+    const newarr = el.from.split(',').map((le) => Number(le));
     console.log(newarr, '======');
-    return myMap.geoObjects.add(new ymaps.Placemark(newarr, { balloonContent: `<img src"${el.image}">` }));
+    return myMap.geoObjects.add(new ymaps.Placemark(newarr, { balloonContent: `<a href='http://localhost:3000/all_teas/${el.id}'>Перейти на страницу информации о прекрасном чае</a>` }));
   });
   // fetch get запрос на все чаи
   // const response = await fetch('http://localhost:3000/all_teas/all');
@@ -25,9 +25,9 @@ async function init() {
   // myMap.geoObjects.add(new ymaps.Placemark([55.684758, 37.738521])); // добавление точки по кордам
   myMap.events.add('click', (e) => { // получение координат по клику
     let coords = e.get('coords');
-    if (window.location.href !== 'http://localhost:3000/all_teas/') myMap.geoObjects.add(new ymaps.Placemark(coords));
+    if (window.location.href !== 'http://localhost:3000/all_teas') myMap.geoObjects.add(new ymaps.Placemark(coords));
     const coordsInput = document.querySelector('#geometry_point');
     console.log(coords);
-    // coordsInput.value = coords;
+    coordsInput.value = coords;
   });
 }
