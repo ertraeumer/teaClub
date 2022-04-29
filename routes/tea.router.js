@@ -12,6 +12,17 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/all', async (req, res) => {
+  console.log("ya tut");
+  try {
+    const allTeas = await Tea.findAll();
+    console.log(allTeas);
+    res.json({ allTeas });
+  } catch (error) {
+    res.send('Ooops, you have got an error:', error);
+  }
+});
+
 router.get('/:tea_id', async (req, res) => {
   const { tea_id } = req.params;
   try {
@@ -37,7 +48,7 @@ router.post('/:tea_id', async (req, res) => {
 });
 
 router.get('/new_tea', (req, res) => {
-  res.render('new_tea_form');
+  res.render('addNewTea');
 });
 
 router.post('/new_tea', async (req, res) => {

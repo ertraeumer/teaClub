@@ -12,7 +12,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       from: {
-        type: Sequelize.GEOMETRY
+        type: Sequelize.TEXT,
       },
       description: {
         type: Sequelize.TEXT
